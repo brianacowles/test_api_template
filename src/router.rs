@@ -1,6 +1,5 @@
 use super::request::Request;
 use super::response::Response;
-use database;
 
 /// Object responsible for processing user-submitted requests
 pub struct Router;
@@ -19,7 +18,6 @@ impl Router {
         unimplemented!();
     }
     {% endif %}
-
     {% if post %}
     /// Handles POST requests and submits the specified recipe to the database.
     pub fn post(request: Request) -> Response {
@@ -30,7 +28,6 @@ impl Router {
         unimplemented!();
     }
     {% endif %}
-
     {% if delete %}
     /// Handles DELETE requests and removes a specific recipe from the database.
     pub fn delete(request: Request) -> Response {
@@ -41,7 +38,6 @@ impl Router {
         unimplemented!();
     }
     {% endif %}
-
     {% if put %}
     /// Handles DELETE requests and removes a specific recipe from the database.
     pub fn put(request: Request) -> Response {

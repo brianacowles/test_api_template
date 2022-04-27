@@ -23,7 +23,6 @@ impl Request {
             Some("GET") => Method::Get,
             Some("POST") => Method::Post,
             Some("DELETE") => Method::Delete,
-            //TODO: should this have a better way of signaling invalid method?
             _ => panic!("Invalid request method"),
         };
         let uri = String::from(split.next().unwrap());

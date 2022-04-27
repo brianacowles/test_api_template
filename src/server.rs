@@ -58,9 +58,18 @@ impl Server {
 
                 // get the response based on the method used
                 let response = match request.method {
+                    {% if get %}
                     Method::Get => Router::get(request),
+                    {% endif %}
+                    {% if get %}
                     Method::Post => Router::post(request),
+                    {% endif %}
+                    {% if get %}
                     Method::Delete => Router::delete(request),
+                    {% endif %}
+                    {% if get %}
+                    Method::Put => Router::put(request),
+                    {% endif %}
                 };
 
                 // write the response to the stream

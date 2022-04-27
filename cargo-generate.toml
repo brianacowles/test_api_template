@@ -1,0 +1,30 @@
+[placeholders.get]
+type = "bool"
+prompt = "Will your API support GET?"
+default = true
+
+[placeholders.post]
+type = "bool"
+prompt = "Will your API support POST?"
+default = true
+
+[placeholders.delete]
+type = "bool"
+prompt = "Will your API support DELETE?"
+default = true
+
+[placeholders.put]
+type = "bool"
+prompt = "Will your API support PUT?"
+default = true
+
+[placeholders.content_type]
+type = "string"
+prompt = "What type of content will your API use for its response?"
+default = "application/json"
+
+[placeholders.threads]
+type = "string"
+prompt = "How many threads should the server use?"
+default = "4"
+regex = "^[0-9]+$"

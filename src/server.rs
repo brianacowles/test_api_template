@@ -1,3 +1,4 @@
+use super::response::Response;
 use super::request::{Method, Request};
 use super::router::Router;
 use rayon::{ThreadPool, ThreadPoolBuilder};
@@ -70,7 +71,7 @@ impl Server {
                     {% if put %}
                     Method::Put => Router::put(request),
                     {% endif %}
-                    _ => {}
+                    _ => Response::invalid_method()
                 };
 
                 // write the response to the stream

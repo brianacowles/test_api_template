@@ -1,5 +1,6 @@
 /// Type that represents the method of an HTTP request: "Get" to retrieve
 /// recipes, "Post" to submit recipes, and "Delete" to remove recipes.
+#[allow(dead_code)]
 #[derive(Debug)]
 pub enum Method {
     Get,

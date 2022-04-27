@@ -50,6 +50,7 @@ pub struct Response {
     body: String,
 }
 
+#[allow(dead_code)]
 impl Response {
     /// creates a new response
     fn from_status_code(code: u16) -> Response {
@@ -80,6 +81,10 @@ impl Response {
 
     pub fn not_found() -> Response {
         Response::from_status_code(404)
+    }
+
+    pub fn invalid_method() -> Response {
+        Response::from_status_code(405)
     }
 
     /// setter for the response header

@@ -61,13 +61,13 @@ impl Server {
                     {% if get %}
                     Method::Get => Router::get(request),
                     {% endif %}
-                    {% if get %}
+                    {% if post %}
                     Method::Post => Router::post(request),
                     {% endif %}
-                    {% if get %}
+                    {% if delete %}
                     Method::Delete => Router::delete(request),
                     {% endif %}
-                    {% if get %}
+                    {% if put %}
                     Method::Put => Router::put(request),
                     {% endif %}
                 };

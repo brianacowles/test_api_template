@@ -5,6 +5,7 @@ pub enum Method {
     Get,
     Post,
     Delete,
+    Put,
 }
 
 /// Representation of an HTTP request.

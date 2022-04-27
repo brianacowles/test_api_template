@@ -70,6 +70,7 @@ impl Server {
                     {% if put %}
                     Method::Put => Router::put(request),
                     {% endif %}
+                    _ => {}
                 };
 
                 // write the response to the stream
